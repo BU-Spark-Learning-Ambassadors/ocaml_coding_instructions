@@ -21,35 +21,50 @@ Whether your using a browser or an IDE, get everything ready to start coding!
   
 ## Step 1: levelone_math
 You will be writing three functions:
-1) sqrt {sqrt (x: int) : int option} or {let sqrt (x: int) : int} -> write a function sqrt that finds the square root of an integer, x,
+1) **sqrt {sqrt (x: int) : int option} or {let sqrt (x: int) : int}** -> write a function sqrt that finds the square root of an integer, x,
    without using any built in square root function:
    • If the input is not a perfect square, then return the square root rounded down (i.e, 63 → 7 because 7×7 = 49, 8×8 = 64 > 63 therefore return 7.
    • For a challenge: if the input is negative, return None. This means your output will be int option. The next few functions will be using this
      function as well, so you have to account for this
    • For an easier route, just return 0 if the input is negative
-2) pythagorean {pythagorean (a:int) (b:int) : int option} or {pythagorean (a:int) (b:int) : int}→ write a function pythagorean,
-   that uses the pythagorean theorem to find c
+   ex : sqrt 63 = 7 or Some 7
+   ex : sqrt 100 = 10 or Some 10
+   ex : sqrt 0 = 0 or Some 0
+   ex : sqrt (-25) = 0 OR None
+   
+3) **pythagorean {pythagorean (a:int) (b:int) : int option} or {pythagorean (a:int) (b:int) : int}** → write a function pythagorean,
+   that uses the pythagorean theorem to find c. if a or b is less than 0, return 0 or None
    • The pythagorean theorem is defined by a² + b² = c²
    • Use the sqrt function you just wrote! this means your outputs will be slightly inaccurate.
-3) quad {quad (a : int) (b : int) (c : int) : int option * int option} or {quad (a : int) (b : int) (c : int) : int * int} →
+   ex : pythagorean 4 5 = 6 or Some 6
+   ex : pythagorean 6 8 = 10 or Some 10
+   ex : pythagorean 0 5 = 0 or None
+   ex : pythagorean 10 20 = 22 or Some 22
+
+5) **quad {quad (a : int) (b : int) (c : int) : int option * int option} or {quad (a : int) (b : int) (c : int) : int * int}** →
    write a function quad that takes in three integer parameter a, b, and c, and returns a tuple of the result of applying the quadratic formula:
    • for guidance on the quadratic formula, go here → https://en.wikipedia.org/wiki/Quadratic_formula
    • Use the sqrt function you just wrote! this means your outputs will be slightly inaccurate.
+   ex : quad 1 4 4 = (-2, -2) or (Some 2, Some -2)
+   ex : quad 1 0 (-4) = (-2, 2) or (Some 2, Some -2)
+   ex : quad 8 1 1 = (0,0) or (None, None)
+   ex : quad 0 1 1 = Exception: Division_by_zero
 
 ## Step 3: leveltwo_listmatching
 You will be writing four functions:
-1) listdilate -> given a list of integers lst, and an int n, return a new list where each element of lst is mulitpled by n
+1) **listdilate {listdilate (lst: int list) (n: int) : int list}** ->
+   given a list of integers lst, and an int n, return a new list where each element of lst is mulitpled by n
         ex : listdilate [1;2;3;4;5] 5 = [5;10;15;20;25]
           
-2) decode -> given a list of integers lst, return a new list where each element of lst is converted into a char, where a=1
+3) **decode {decode (lst: int list) : char list}** -> given a list of integers lst, return a new list where each element of lst is converted into a char, where a=1
     b=2, c=3, d=4 . . . z=26. assume all values of lst are in range.
         ex : decode [19;16;1;18;11] = ['s';'p';'a';'r';'k']. 
    
-3) encode -> given a list of characters lst, return a new list where each element of lst is converted into a integer, where 1=a
+4) **encode {encode (lst: char list) : int list}** -> given a list of characters lst, return a new list where each element of lst is converted into a integer, where 1=a
     2=b, 3=c, 4=d . . . 26=z. assume all values of lst are in range.
         ex : encode ['s';'p';'a';'r';'k'] = [19;16;1;18;11].
    
-4) createstring -> given a list of characters lst, return a new string where the elements of lst are all combined.
+5) **createstring {createstring (lst: char list) : string}** -> given a list of characters lst, return a new string where the elements of lst are all combined.
         ex : createstring ['s';'p';'a';'r';'k'] = "spark"
 
 ## Step 3: Append some code to Message.java  
