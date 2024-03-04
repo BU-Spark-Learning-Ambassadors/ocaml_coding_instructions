@@ -18,37 +18,42 @@ let quad (a : int) (b : int) (c : int) : (*put int option * int option or int * 
 
 
 
-(*tests for int option*) (*delete these tests if you're using int*)
-let sqrt 63 = Some 7
-let sqrt 100 = Some 10
-let sqrt 0 = Some 0
-let sqrt (-25) = None
+(*tests for int option*)
+(*copy this block into toplevel*)
+(*
+sqrt 63 = Some 7;;
+sqrt 100 = Some 10;;
+sqrt 0 = Some 0;;
+sqrt (-25) = None;;
 
-let pythagorean 4 5 = Some 6
-let pythagorean 6 8 = Some 10
-let pythagorean 0 5 = None
-let pythagorean 10 20 = Some 22
+pythagorean 4 5 = Some 6;;
+pythagorean -1 8 = None;;
+pythagorean 0 5 = Some 5;;
+pythagorean 10 20 = Some 22;;
 
-let quad 1 4 4 = (Some 2, Some -2)
-let quad 1 0 (-4) = (Some 2, Some -2)
-let quad 8 1 1 =(None, None)
-let quad 0 1 1 = Exception: Division_by_zero
+quad 1 4 4 = (Some (-2), Some (-2));;
+quad 1 0 (-4) = (Some 2, Some (-2));;
+quad 8 1 1 =(None, None);;
+*)
+(* quad 0 1 1 should result in Exception: Division_by_zero *)
 
 
-(*tests for int*) (*delete these tests if you're using int option*)
-let sqrt 63 = 7
-let sqrt 100 = 10
-let sqrt 0 = 0 
-let sqrt (-25) = 0
+(*tests for int*) 
+(*copy this block into toplevel*)
+(*
+let sqrt 63 = 7;;
+let sqrt 100 = 10;;
+let sqrt 0 = 0 ;;
+let sqrt (-25) = 0;;
 
-let pythagorean 4 5 = 6 
-let pythagorean 6 8 = 10
-let pythagorean 0 5 = 0
-let pythagorean 10 20 = 22
+let pythagorean 4 5 = 6 ;;
+let pythagorean -1 8 = 0;;
+let pythagorean 0 5 = 5;;
+let pythagorean 10 20 = 22;;
 
-let quad 1 4 4 = (-2, -2) 
-let quad 1 0 (-4) = (-2, 2)
-let quad 8 1 1 = (0,0)
-let quad 0 1 1 = Exception: Division_by_zero
-
+let quad 1 4 4 = (-2, -2) ;;
+let quad 1 0 (-4) = (-2, 2);;
+let quad 8 1 1 = (0,0);;
+)*
+(* quad 0 1 1 should result in Exception: Division_by_zero *)
 
