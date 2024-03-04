@@ -21,16 +21,16 @@ Whether your using a browser or an IDE, get everything ready to start coding!
   
 ## Step 1: levelone_math
 You will be writing three functions:
-1) **sqrt {sqrt (x: int) : int option} or {let sqrt (x: int) : int}** -> write a function sqrt that finds the square root of an integer, x, \n
+1) **sqrt {sqrt (x: int) : int option} or {let sqrt (x: int) : int}** -> write a function sqrt that finds the square root of an integer, x,  
    without using any built in square root function: \n
-   • If the input is not a perfect square, then return the square root rounded down (i.e, 63 → 7 because 7×7 = 49, 8×8 = 64 > 63 therefore return 7. \n
-   • For a challenge: if the input is negative, return None. This means your output will be int option. The next few functions will be using this \n
-     function as well, so you have to account for this \n
-   • For an easier route, just return 0 if the input is negative \n
-   ex : sqrt 63 = 7 or Some 7 \n
-   ex : sqrt 100 = 10 or Some 10 \n
-   ex : sqrt 0 = 0 or Some 0 \n
-   ex : sqrt (-25) = 0 OR None \n
+   • If the input is not a perfect square, then return the square root rounded down (i.e, 63 → 7 because 7×7 = 49, 8×8 = 64 > 63 therefore return 7.  
+   • For a challenge: if the input is negative, return None. This means your output will be int option. The next few functions will be using this. 
+     function as well, so you have to account for this  
+   • For an easier route, just return 0 if the input is negative  
+   ex : sqrt 63 = 7 or Some 7  
+   ex : sqrt 100 = 10 or Some 10  
+   ex : sqrt 0 = 0 or Some 0  
+   ex : sqrt (-25) = 0 OR None  
    
 3) **pythagorean {pythagorean (a:int) (b:int) : int option} or {pythagorean (a:int) (b:int) : int}** → write a function pythagorean,
    that uses the pythagorean theorem to find c. if a or b is less than 0, return 0 or None
