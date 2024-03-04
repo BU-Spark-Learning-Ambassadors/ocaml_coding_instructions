@@ -41,19 +41,19 @@ quad 8 1 1 =(None, None);;
 (*tests for int*) 
 (*copy this block into toplevel*)
 (*
-let sqrt 63 = 7;;
-let sqrt 100 = 10;;
-let sqrt 0 = 0 ;;
-let sqrt (-25) = 0;;
+sqrt 63 = 7;;
+sqrt 100 = 10;;
+sqrt 0 = 0 ;;
+sqrt (-25) = 0;;
 
-let pythagorean 4 5 = 6 ;;
-let pythagorean -1 8 = 0;;
-let pythagorean 0 5 = 5;;
-let pythagorean 10 20 = 22;;
+pythagorean 4 5 = 6 ;;
+pythagorean (-1) 8 = 0;;
+pythagorean 0 5 = 5;;
+pythagorean 10 20 = 22;;
 
-let quad 1 4 4 = (-2, -2) ;;
-let quad 1 0 (-4) = (-2, 2);;
-let quad 8 1 1 = (0,0);;
+quad 1 4 4 = (-2, -2) ;;
+quad 1 0 (-4) = (2, -2);;
+quad 8 1 1 = (0,0);;
 )*
 (* quad 0 1 1 should result in Exception: Division_by_zero *)
 
