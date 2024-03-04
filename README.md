@@ -21,19 +21,16 @@ Whether your using a browser or an IDE, get everything ready to start coding!
   
 ## Step 1: levelone_math
 You will be writing three functions:
-1) **sqrt {sqrt (x: int) : int option} or {let sqrt (x: int) : int}** -> write a function sqrt that finds the square root of an integer, x,  
-   without using any built in square root function: \n
+1) **sqrt {sqrt (x: int) : int option} or {let sqrt (x: int) : int}** -> write a function sqrt that finds the square root of an integer, x, without using any built in square root function:  
  • If the input is not a perfect square, then return the square root rounded down (i.e, 63 → 7 because 7×7 = 49, 8×8 = 64 > 63 therefore return 7.  
- • For a challenge: if the input is negative, return None. This means your output will be int option. The next few functions will be using this. 
-   function as well, so you have to account for this  
+ • For a challenge: if the input is negative, return None. This means your output will be int option. The next few functions will be using this function as well, so you have to account for this  
  • For an easier route, just return 0 if the input is negative  
    ex : sqrt 63 = 7 or Some 7  
    ex : sqrt 100 = 10 or Some 10  
    ex : sqrt 0 = 0 or Some 0  
    ex : sqrt (-25) = 0 OR None  
    
-3) **pythagorean {pythagorean (a:int) (b:int) : int option} or {pythagorean (a:int) (b:int) : int}** → write a function pythagorean,  
-   that uses the pythagorean theorem to find c. if a or b is less than 0, return 0 or None  
+3) **pythagorean {pythagorean (a:int) (b:int) : int option} or {pythagorean (a:int) (b:int) : int}** → write a function pythagorean, that uses the pythagorean theorem to find c. if a or b is less than 0, return 0 or None  
  • The pythagorean theorem is defined by a² + b² = c²  
  • Use the sqrt function you just wrote! this means your outputs will be slightly inaccurate.  
    ex : pythagorean 4 5 = 6 or Some 6  
@@ -72,15 +69,14 @@ You will be writing four functions:
 
 ## Step 3: levelthree_types  
 You have three types : Ambassador, Meeting_room, and Student.  
-  A student wants access to a meeting room.  
-    If the meeting room is booked, then there is a chance the ambassador that it's booked by will let the student use the room, based on a few conditions:  
-      - If the Ambassador is a Learning ambassador, then the room can never be given  
-    else:  
-      - If the student is friends with the ambassador who booked the room, they will let the student have the room.  
-      - If the student is friends with at least 3 ambassadors, no matter who, they will let the student have the room  
+A student wants access to a meeting room.  
+If the meeting room is booked, then there is a chance the ambassador that it's booked by will let the student use the room, based on a few conditions:
+ a) If the Ambassador is a Learning ambassador, then the room can never be given  
+ else:  
+ b) If the student is friends with the ambassador who booked the room, they will let the student have the room.  
+ c) If the student is friends with at least 3 ambassadors, no matter who, they will let the student have the room  
      
-Write a function unbook, which takes in parameters (s : student) (roomlist : meeting_room list)  
-where roomlist has three meeting rooms a,b, and c and returns a tuple of three booleans, for whether the student can have access to the list of meeting rooms.   
+Write a function unbook, which takes in parameters (s : student) (roomlist : meeting_room list) where roomlist has three meeting rooms a,b, and c and returns a tuple of three booleans, for whether the student can have access to the list of meeting rooms.   
 
 
 ## Step 4: Create a branch  
