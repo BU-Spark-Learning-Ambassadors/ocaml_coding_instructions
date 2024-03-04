@@ -70,10 +70,23 @@ You will be writing four functions:
    given a list of characters lst, return a new string where the elements of lst are all combined.  
         ex : createstring ['s';'p';'a';'r';'k'] = "spark"  
 
-## Step 3: Append some code to Message.java  
-Append the following to your Message.java file:
-`public static void tester(int[] test) { String testString = ""; for (int i = 0; i < test.length; i++) { testString += test[i]; } }`  
-**Commit!**  
+## Step 3: levelthree_types  
+You have three types : Ambassador, Meeting_room, and Student.  
+   A student wants access to a meeting room.  
+     If the meeting room is booked, then there is a chance the ambassador that  
+     it's booked by will let the student use the room, based on a few conditions:  
+     - If the Ambassador is a Learning ambassador, then the room can never be given  
+   else:  
+     - If the student is friends with the ambassador who booked the room, they will let  
+       the student have the room   
+     - If the student is friends with at least 3 ambassadors, no matter who, they will  
+       let the student have the room  
+     
+Write a function unbook, which takes in parameters  
+   (s : student) (roomlist : meeting_room list)  
+   where roomlist has three meeting rooms a,b, and c and returns a tuple of three booleans,  
+   for whether the student can have access to the list of meeting rooms.   
+
 
 ## Step 4: Create a branch  
 Create a new branch called temp, and move into it. Use the command `git push --set-upstream origin temp` to ensure proper commits from here on; you could get an error otherwise.  
