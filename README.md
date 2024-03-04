@@ -61,12 +61,12 @@ You will be writing four functions:
    a=1 b=2, c=3, d=4 . . . z=26. assume all values of lst are in range.  
         ex : decode [19;16;1;18;11] = ['s';'p';'a';'r';'k'].   
    
-3) **encode {encode (lst: char list) : int list}** ->
+3) **encode {encode (lst: char list) : int list}** ->  
    given a list of characters lst, return a new list where each element of lst is converted into a integer, where:  
    1=a 2=b, 3=c, 4=d . . . 26=z. assume all values of lst are in range.  
         ex : encode ['s';'p';'a';'r';'k'] = [19;16;1;18;11].  
    
-4) **createstring {createstring (lst: char list) : string}** ->
+4) **createstring {createstring (lst: char list) : string}** ->  
    given a list of characters lst, return a new string where the elements of lst are all combined.  
         ex : createstring ['s';'p';'a';'r';'k'] = "spark"  
 
