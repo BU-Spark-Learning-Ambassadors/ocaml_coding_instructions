@@ -45,14 +45,29 @@ type student = {
 }
 
 
+
+(* function *)       
+let unbook (s : student) (roomlist : meeting_room list) : boolean * boolean * boolean = 
+
+
+
+
+
 (* test *)
 let ambassador1 = Learning {name = "l_amb"}
 let ambassador2 = Ignite {name = "i_amb"}
-let s = {name = "Lia"; friends = [ambassador2;ambassador1]}
-let a = { booked = true; by = Some ambassador1 }
-let b = { booked = true; by = Some ambassador2}
-let c = { booked = false; by = None}      
-let ans = unbook s [a;b;c] = (false, true, true)
-  
-(* function *)       
-let unbook (s : student) (roomlist : meeting_room list) : boolean * boolean * boolean = 
+let s1 = {name = "Lia"; friends = [ambassador2;ambassador1]}
+let a1 = { booked = true; by = Some ambassador1 }
+let b1 = { booked = true; by = Some ambassador2}
+let c1 = { booked = false; by = None}
+
+let ambassador3 = Jedi {name = "j_amb"}
+let ambassador4 = Hackathon {name = "h_amb"}
+let ambassador5 = Community {name = "c_amb"}
+let s2 = {name = "Aaron"; friends = [ambassador1;ambassador2;ambassador3;ambassador4]}
+let a2 = {booked = false; by = None}
+let b2 = {booked = true; by = Some ambassador1}
+let c2 = {booked = true; by = Some ambassador5}
+
+let ans1 = (unbook s1 [a1;b1;c1] = (false, true, true))
+let ans2 = (unbook s2 [a2;b2;c2] = (true, false, true))
