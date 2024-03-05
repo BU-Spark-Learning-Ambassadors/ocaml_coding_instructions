@@ -34,6 +34,7 @@ type ambassador =
   |Community of {name: string;}
   |Jedi of {name: string;}
   |Ignite of {name: string;} 
+  |Hackathon of {name: string;}
 
 type meeting_room = { 
   booked : bool; 
