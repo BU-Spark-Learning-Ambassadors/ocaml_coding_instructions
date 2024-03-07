@@ -47,7 +47,7 @@ You will be writing three functions:
    ex : quad 8 1 1 = (0,0) or (None, None)  
    ex : quad 0 1 1 = Exception: Division_by_zero  
 
-## Step 3: leveltwo_listmatching  
+## Step 2: leveltwo_listmatching  
 You will be writing four functions:  
 1) **listdilate {listdilate (lst: int list) (n: int) : int list}** ->  
    given a list of integers lst, and an int n, return a new list where each element of lst is mulitpled by n  
@@ -79,32 +79,11 @@ If the meeting room is booked, then there is a chance the ambassador that it's b
 Write a function unbook, which takes in parameters (s : student) (roomlist : meeting_room list) where roomlist has three meeting rooms a,b, and c and returns a tuple of three booleans, for whether the student can have access to the list of meeting rooms.   
 
 
-## Step 4: Create a branch  
-Create a new branch called temp, and move into it. Use the command `git push --set-upstream origin temp` to ensure proper commits from here on; you could get an error otherwise.  
-
-## Step 5: Create a "decode.java" file  
-Create the file and append this code:
-`public class decode {public static void main(String[] args) {}public static String decoder(int[] arr) {String result = ""; for (int i = 0; i < arr.length; i++) {result += String.valueOf( (char)arr[i] );}return result;}}`  
-**Commit!**  
-  
-## Step 6: Create a file order.java  
-Create the code and append this code:
-`public class order { public static void main(String[] args) { } public static String asciiOrder(String phrase) { int[] arr = new int[phrase.length()];for (int i = 0; i < phrase.length(); i++) { arr[i] = (int) phrase.charAt(i); } 
-Sort.selectionSort(arr); return decode.decoder(arr);} } `  
-**Commit!**
-
-## Step 7: Merge with main  
-Let's merge the branch we're in, temp, with main. Make sure you move into the main branch first!
-**Commit!**
-
-## Step 8: Whoops! We have to remove one of our commits
-We actually **didn't** have to append any code to Message.java in step 4 (I LIED TO YOU SO YOU CAN LEARN!!) so we want to remove this commit. Since we have been committing regularly, we can just remove that commit and revert to the version of Message.java before step 3. Make sure to follow the exact syntax above! In the file that opens when you run the command to delete a commit, delete the line that corresponds to the commit you’re trying to delete, save by clicking the three lines in the top left -> file -> save, and then close that file by hitting the ‘x’ on its tab. _(hint: if your log isn't long enough, press enter a few times; type q to exit the log)_  
-
-## Step 9: Run our Message.java file!  
-You can run directly in the codespace (not by using a command, but by clicking the pages icon (Explorer) on the left side, clicking the Message.java file, clicking the triangle (run and debug), and then green 'run and debug' button. It may prompt you to install an extension; install the first one it shows you, hit run again, and say yes to any prompts)
-The output should appear in the terminal. You should get a link in return. Copy this into your browser and see where it takes you!
-You should also see the String "Spark! Git Microchallenge" re-arranged in Ascii order!
+## Step 4: Test your functions! 
+For levelone_math and leveltwo_listmatching, there are commented out blocks of code that you can copy into the toplevel. Each statement should evaluate to true. In levelthree_types, the test is already written into the file, and both tests should evaluate to true when you run the file.
 
 # Need help?
-Go to the Spark! Space and ask any student employee for a Learning Ambassador that can help with a micro-challenge! If you need help with step 8 & 9, check out this video -> https://drive.google.com/file/d/175K595HzhlMjifgqtVAvV84Bv2xHrCxV/view?usp=sharing )
+Go to the Spark! Space and ask any student employee for a Learning Ambassador that can help with a micro-challenge!
+
+
 
